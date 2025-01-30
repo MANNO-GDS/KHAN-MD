@@ -7,34 +7,33 @@ cmd({
     alias: ["status", "runtime", "uptime"],
     desc: "Check uptime and system status",
     category: "main",
-    react: "📟",
+    react: "♥️",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
         // Generate system status message
-        const status = `╭━━〔 *KHAN-MD* 〕━━┈⊷
+        const status = `╭━━〔 *MANNO-MD* 〕━━┈⊷
 ┃◈╭─────────────·๏
 ┃◈┃• *⏳Uptime*:  ${runtime(process.uptime())} 
-┃◈┃• *📟 Ram usage*: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
-┃◈┃• *⚙️ HostName*: ${os.hostname()}
-┃◈┃• *👨‍💻 Owner*: Jawad TechX
-┃◈┃• *🧬 Version*: 3.0.0 BETA
+┃◈┃• *📟 Ram usage*: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}M
+┃◈┃• *👨‍💻 Owner*: *MANNO-GDS*
+┃◈┃• *🧬 Version*: *4.0.0 BETA*
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
-> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ Jᴀᴡᴀᴅ TᴇᴄʜX`;
+> *© POWERD BY MANNO-MD*`;
 
         // Send the status message with an image
         await conn.sendMessage(from, { 
-            image: { url: `https://files.catbox.moe/juroe8.jpg` },  // Image URL
+            image: { url: `https://i.ibb.co/Ndj72rSQ/temp-image.jpg` },  // Image URL
             caption: status,
             contextInfo: {
                 mentionedJid: [m.sender],
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363354023106228@newsletter',
-                    newsletterName: 'JawadTechX',
+                    newsletterJid: '.',
+                    newsletterName: 'manno',
                     serverMessageId: 143
                 }
             }
